@@ -16,8 +16,17 @@ public class Aluno {
         return this.nome;
     }
 
-    public boolean equals(Object o) {
-        Aluno outro = (Aluno)o;
-        return this.nome.equals(outro.nome);
+    @Override
+    public boolean equals(Object obj) {
+        // se as referencias sao iguais, os objetos sao os mesmos
+        if (this == obj) {
+            return true;
+        }
+        // se o objeto é nulo ou nao é uma instancia da classe objeto, retorna falso
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Aluno outroAluno = (Aluno) obj;
+        return nome.equals(outroAluno.nome);
     }
 }

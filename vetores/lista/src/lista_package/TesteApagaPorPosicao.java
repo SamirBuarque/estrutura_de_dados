@@ -12,17 +12,17 @@ public class TesteApagaPorPosicao {
 
         lista.adiciona(8, a1);
         lista.adiciona(a2);
-        System.out.println(lista.informarQuantidade());
+        lista.mostrarTamanhoDaLista();
 
         System.out.println(lista);
 
-        lista.remove(0);
-        System.out.println(lista.informarQuantidade());
+        lista.remove(102);
+        lista.mostrarTamanhoDaLista();
         lista.remove(8);
-        System.out.println(lista.informarQuantidade());
+        lista.mostrarTamanhoDaLista();
         System.out.println(lista);
-        System.out.println(lista.informarQuantidade());
+        lista.mostrarTamanhoDaLista();
         lista.remove(0);
-        System.out.println(lista.informarQuantidade());
+        lista.mostrarTamanhoDaLista();
     }
 }

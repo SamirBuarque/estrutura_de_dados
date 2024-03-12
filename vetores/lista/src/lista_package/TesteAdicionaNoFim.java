@@ -14,5 +14,6 @@ public class TesteAdicionaNoFim {
         lista.adiciona(aluno2);
 
         System.out.println(lista);
+        lista.mostrarTamanhoDaLista();
     }
 }

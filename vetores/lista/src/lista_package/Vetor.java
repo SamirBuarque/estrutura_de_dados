@@ -16,20 +16,20 @@ public class Vetor {
 
     // adiciona o aluno na posição mais próxima disponível
     public void adiciona(Aluno aluno) {
-        for (int i=0; i < this.alunos.length; i++) {
-            if (this.alunos[i] == null) {
-                this.alunos[i] = aluno;
-                this.contador += 1;
-                break;
-            }
-        }
+        // uma maneira muito mais eficiente de adicionar no final da lista (caso a fila esteja compactada à esquerda)
+        this.alunos[contador] = aluno;
+        this.contador++;
+    }
+
+    private boolean posicaoValida(int posicao) {
+        return posicao < this.alunos.length && posicao >=0;
     }
 
     // adiciona um aluno na lista dada uma posição (se a posição já estiver ocupada, o aluno será alocado no espaço
     // mais próximo
     public void adiciona(int posicao, Aluno aluno) {
         // verifica se o numero informado pelo usuário é válido
-        if (posicao < this.alunos.length && posicao >= 0) {
+        if (posicaoValida(posicao)) {
             if (this.alunos[posicao] == null) {
                 this.alunos[posicao] = aluno;
                 this.contador += 1;
@@ -56,8 +56,7 @@ public class Vetor {
     // retorna o aluno dada uma posição na lista
     public Aluno pega(int posicao) {
         // verifica se a posicao informada é valida ou nao
-        if (posicao < this.alunos.length && posicao >= 0) {
-            //System.out.println(this.alunos[posicao]);
+        if (posicaoValida(posicao)) {
             return this.alunos[posicao];
         } else {
             System.out.println("Posicao informada é inválida");
@@ -82,28 +81,49 @@ public class Vetor {
     }
 
     // verifica se existe ou nao um aluno numa dada posição na lista
-    public boolean contem(int posicao) {
-        // verifica se a posicao informada é valida ou nao
-        if (posicao < this.alunos.length && posicao >= 0) {
-            // verifica se a posição informada está vazia ou nao
-            if (this.alunos[posicao] == null) {
-                System.out.println("Não existe aluno na posição informada.");
-                return false;
-            } else {
-                System.out.println("Existe aluno na posição informada");
+    public boolean contem(Aluno aluno) {
+        for (int i=0; i<this.contador; i++) {
+            /* == compara as referencias do objeto e nao o objeto em si
+            if (this.alunos[i] == aluno) {
                 return true;
             }
-        } else {
-            System.out.println("Posicao informada é inválida");
-            return false;
+            */
+
+            // compara os dois objetos. Se os atributos são iguais, os objetos sao iguais.
+             if (aluno.equals(this.alunos[i])) {
+                 System.out.println("O aluno " + aluno.getNome() + " está na lista");
+                 return true;
+            }
+             /*
+             if (aluno.getId().equals(this.alunos[i].getId())) {
+                 System.out.println("esta no segundo if");
+                 return true;
+             }*/
         }
+
+        System.out.println(aluno.getNome());
+        return false;
     }
 
-    public int informarQuantidade() {
-        return this.contador;
-    }
     public String toString() {
-        return Arrays.toString(alunos);
+        if (this.contador == 0) {
+            return "[]";
+        }
+        StringBuilder builder = new StringBuilder();
+        builder.append("[");
+        // esse -1 é para nao adicionar o ultimo elemento com uma virgula e espaço vazio no final
+        for (int i=0; i<this.contador-1; i++) {
+            builder.append(this.alunos[i]);
+            builder.append(", ");
+        }
+        // adiciona o ultimo elemento sem espaço vazio
+        builder.append(this.alunos[this.contador-1]);
+        builder.append("]");
+        return builder.toString();
+    }
+
+    public void mostrarTamanhoDaLista() {
+        System.out.println("Tamanho da lista: "+this.contador);
     }
 
 }
