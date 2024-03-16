@@ -1,7 +1,6 @@
 package lista_package;
-import java.util.Scanner;
 
-public class Aluno {
+public class Objeto {
     private String nome;
 
     public String getNome() {
@@ -16,8 +15,7 @@ public class Aluno {
         return this.nome;
     }
 
-    @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Objeto obj) {
         // se as referencias sao iguais, os objetos sao os mesmos
         if (this == obj) {
             return true;
@@ -26,7 +24,7 @@ public class Aluno {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Aluno outroAluno = (Aluno) obj;
-        return nome.equals(outroAluno.nome);
+        Objeto outroObjeto = (Objeto) obj;
+        return nome.equals(outroObjeto.nome);
     }
 }

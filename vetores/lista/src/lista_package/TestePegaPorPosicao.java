@@ -1,8 +1,8 @@
 package lista_package;
 public class TestePegaPorPosicao {
     public static void main(String[] args) {
-        Aluno a1 = new Aluno();
-        Aluno a2 = new Aluno();
+        Objeto a1 = new Objeto();
+        Objeto a2 = new Objeto();
 
         a1.setNome("Rafael");
         a2.setNome("Paulo");
@@ -11,12 +11,8 @@ public class TestePegaPorPosicao {
         Vetor lista = new Vetor();
 
         lista.adiciona(a1);
-        lista.adiciona(a2);
+        lista.adiciona(0, a2);
 
-        Aluno aluno1 = lista.pega(0);
-        Aluno aluno2 = lista.pega(1);
-
-        System.out.println(aluno1);
-        System.out.println(aluno2);
+        System.out.println(lista.pega(0));
     }
 }

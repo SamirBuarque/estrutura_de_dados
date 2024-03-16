@@ -3,10 +3,10 @@ package lista_package;
 public class TesteAdicionaPorPosicao {
     public static void main(String[] args) {
         Vetor lista = new Vetor();
-        Aluno a1 = new Aluno();
-        Aluno a2 = new Aluno();
-        Aluno a3 = new Aluno();
-        Aluno a4 = new Aluno();
+        Objeto a1 = new Objeto();
+        Objeto a2 = new Objeto();
+        Objeto a3 = new Objeto();
+        Objeto a4 = new Objeto();
 
         a1.setNome("Joao");
         a2.setNome("Maria");
@@ -21,6 +21,6 @@ public class TesteAdicionaPorPosicao {
 
         lista.adiciona(2, a4);
         System.out.println(lista);
-        //lista.mostrarTamanhoDaLista();
+        lista.mostrarTamanhoDaLista();
     }
 }

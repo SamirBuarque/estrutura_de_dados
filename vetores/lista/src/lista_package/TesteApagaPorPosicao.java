@@ -2,10 +2,11 @@ package lista_package;
 
 public class TesteApagaPorPosicao {
     public static void main(String[] args) {
-        Aluno a1 = new Aluno();
-        Aluno a2 = new Aluno();
-        Aluno a3 = new Aluno();
-        Aluno a4 = new Aluno();
+        Objeto a1 = new Objeto();
+        Objeto a2 = new Objeto();
+        Objeto a3 = new Objeto();
+        Objeto a4 = new Objeto();
+
         a1.setNome("a1");
         a2.setNome("a2");
         a3.setNome("a3");
