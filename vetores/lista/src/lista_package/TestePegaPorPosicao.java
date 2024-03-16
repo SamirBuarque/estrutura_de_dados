@@ -7,6 +7,7 @@ public class TestePegaPorPosicao {
         a1.setNome("Rafael");
         a2.setNome("Paulo");
 
+
         Vetor lista = new Vetor();
 
         lista.adiciona(a1);

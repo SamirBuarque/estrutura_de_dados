@@ -1,26 +1,26 @@
 package lista_package;
 
-public class TesteApagaPorPosicao {
+public class TesteAdicionaPorPosicao {
     public static void main(String[] args) {
+        Vetor lista = new Vetor();
         Aluno a1 = new Aluno();
         Aluno a2 = new Aluno();
         Aluno a3 = new Aluno();
         Aluno a4 = new Aluno();
-        a1.setNome("a1");
-        a2.setNome("a2");
-        a3.setNome("a3");
-        a4.setNome("a4");
 
-
-        Vetor lista = new Vetor();
+        a1.setNome("Joao");
+        a2.setNome("Maria");
+        a3.setNome("Carlos");
+        a4.setNome("CJ");
 
         lista.adiciona(a1);
         lista.adiciona(a2);
         lista.adiciona(a3);
-        lista.adiciona(a4);
+
         System.out.println(lista);
 
-        lista.remove(1);
+        lista.adiciona(2, a4);
         System.out.println(lista);
+        //lista.mostrarTamanhoDaLista();
     }
 }
