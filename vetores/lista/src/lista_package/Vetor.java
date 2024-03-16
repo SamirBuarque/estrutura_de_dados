@@ -11,12 +11,13 @@ public class Vetor {
 * Verifica se um dado aluno está armazenado; ok
 * Informa o número de alunos armazenados; ok
 * */
-    private Objeto[] objetos = new Objeto[100];
+    private Objeto[] objetos = new Objeto[1000];
     private int numeroDeElementos = 0;
 
     // adiciona o aluno na posição mais próxima disponível
     public void adiciona(Objeto objeto) {
         // uma maneira muito mais eficiente de adicionar no final da lista (caso a fila esteja compactada à esquerda)
+        this.garanteEspaco();
         this.objetos[numeroDeElementos] = objeto;
         this.numeroDeElementos++;
     }
@@ -101,25 +102,16 @@ public class Vetor {
     // verifica se existe ou nao um aluno numa dada posição na lista
     public boolean contem(Objeto objeto) {
         for (int i=0; i<this.numeroDeElementos; i++) {
-            /* == compara as referencias do objeto e nao o objeto em si
-            if (this.alunos[i] == aluno) {
+            if (this.objetos[i] == objeto) {
                 return true;
             }
-            */
 
-            // compara os dois objetos. Se os atributos são iguais, os objetos sao iguais.
-             if (objeto.equals(this.objetos[i])) {
-                 System.out.println("O aluno " + objeto.getNome() + " está na lista");
-                 return true;
-            }
-             /*
-             if (aluno.getId().equals(this.alunos[i].getId())) {
-                 System.out.println("esta no segundo if");
-                 return true;
-             }*/
+
+//            // compara os dois objetos. Se os atributos são iguais, os objetos sao iguais.
+//             if (objeto.equals(this.objetos[i])) {
+//                 return true;
+//            }
         }
-
-        System.out.println(objeto.getNome());
         return false;
     }
 
@@ -148,6 +140,10 @@ public class Vetor {
 
     public void mostrarTamanhoDaLista() {
         System.out.println("Tamanho da lista: "+this.numeroDeElementos);
+    }
+
+    public int mostrarTamanhoDoArray() {
+        return this.objetos.length;
     }
 
 }

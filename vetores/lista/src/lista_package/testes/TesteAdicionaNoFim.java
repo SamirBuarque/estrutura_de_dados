@@ -1,4 +1,7 @@
-package lista_package;
+package lista_package.testes;
+
+import lista_package.Objeto;
+import lista_package.Vetor;
 
 public class TesteAdicionaNoFim {
     public static void main(String[] args) {

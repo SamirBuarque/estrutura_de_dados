@@ -1,4 +1,8 @@
-package lista_package;
+package lista_package.testes;
+
+import lista_package.Objeto;
+import lista_package.Vetor;
+
 public class TestePegaPorPosicao {
     public static void main(String[] args) {
         Objeto a1 = new Objeto();
@@ -11,8 +15,9 @@ public class TestePegaPorPosicao {
         Vetor lista = new Vetor();
 
         lista.adiciona(a1);
-        lista.adiciona(0, a2);
+        lista.adiciona(a2);
 
         System.out.println(lista.pega(0));
+        System.out.println(lista.pega(1));
     }
 }
