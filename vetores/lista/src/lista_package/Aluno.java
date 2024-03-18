@@ -1,6 +1,6 @@
 package lista_package;
 
-public class Objeto {
+public class Aluno {
     private String nome;
 
     public String getNome() {
@@ -15,16 +15,16 @@ public class Objeto {
         return this.nome;
     }
 
-    public boolean equals(Objeto obj) {
+    public boolean equals(Aluno aluno) {
         // se as referencias sao iguais, os objetos sao os mesmos
-        if (this == obj) {
+        if (this == aluno) {
             return true;
         }
         // se o objeto é nulo ou nao é uma instancia da classe objeto, retorna falso
-        if (obj == null || getClass() != obj.getClass()) {
+        if (aluno == null || getClass() != aluno.getClass()) {
             return false;
         }
-        Objeto outroObjeto = (Objeto) obj;
-        return nome.equals(outroObjeto.nome);
+        Aluno outroAluno = (Aluno) aluno;
+        return nome.equals(outroAluno.nome);
     }
 }

@@ -1,14 +1,14 @@
 package lista_package.testes;
 
-import lista_package.Objeto;
+import lista_package.Aluno;
 import lista_package.Vetor;
 
 public class TesteContem {
     public static void main(String[] args) {
         Vetor lista = new Vetor();
-        Objeto a1 = new Objeto();
-        Objeto a2 = new Objeto();
-        Objeto a3 = new Objeto();
+        Aluno a1 = new Aluno();
+        Aluno a2 = new Aluno();
+        Aluno a3 = new Aluno();
 
         a1.setNome("orochi");
         a2.setNome("orochi");

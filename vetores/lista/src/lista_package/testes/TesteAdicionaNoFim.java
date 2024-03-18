@@ -1,12 +1,12 @@
 package lista_package.testes;
 
-import lista_package.Objeto;
+import lista_package.Aluno;
 import lista_package.Vetor;
 
 public class TesteAdicionaNoFim {
     public static void main(String[] args) {
-        Objeto aluno1 = new Objeto();
-        Objeto aluno2 = new Objeto();
+        Aluno aluno1 = new Aluno();
+        Aluno aluno2 = new Aluno();
 
         aluno1.setNome("João");
         aluno2.setNome("José");
@@ -17,6 +17,6 @@ public class TesteAdicionaNoFim {
         lista.adiciona(aluno2);
 
         System.out.println(lista);
-        lista.mostrarTamanhoDaLista();
+        lista.mostrarTotalDeElementos();
     }
 }

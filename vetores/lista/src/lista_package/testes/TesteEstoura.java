@@ -7,8 +7,8 @@ public class TesteEstoura {
         long inicio = System.currentTimeMillis();
 
         for (int i=0; i<=100001; i++) {
-            Objeto objeto = new Objeto();
-            vetor.adiciona(objeto);
+            Aluno aluno = new Aluno();
+            vetor.adiciona(aluno);
         }
         System.out.println(vetor.mostrarTamanhoDoArray());
         long fim = System.currentTimeMillis();

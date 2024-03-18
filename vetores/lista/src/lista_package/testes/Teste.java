@@ -1,16 +1,18 @@
-package lista_package;
+package lista_package.testes;
+
+import lista_package.Aluno;
 
 import java.util.ArrayList;
 
 public class Teste {
     public static void main(String[] args) {
         ArrayList lista = new ArrayList();
-        ArrayList<Objeto> listaComGenerics = new ArrayList<Objeto>();
+        ArrayList<Aluno> listaComGenerics = new ArrayList<Aluno>();
 
-        Objeto a1 = new Objeto();
-        Objeto a2 = new Objeto();
-        Objeto a3 = new Objeto();
-        Objeto a4 = new Objeto();
+        Aluno a1 = new Aluno();
+        Aluno a2 = new Aluno();
+        Aluno a3 = new Aluno();
+        Aluno a4 = new Aluno();
 
 
 

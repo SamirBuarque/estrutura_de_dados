@@ -20,9 +20,9 @@ public class TesteDeTempoDoContem {
 //        }
 
         for (int i=0; i<100000; i++) {
-            Objeto objeto = new Objeto();
-            if (vetor.contem(objeto)) {
-                System.out.println("Erro: vetor adicionou o objeto " + objeto);
+            Aluno aluno = new Aluno();
+            if (vetor.contem(aluno)) {
+                System.out.println("Erro: vetor adicionou o objeto " + aluno);
             }
         }
 

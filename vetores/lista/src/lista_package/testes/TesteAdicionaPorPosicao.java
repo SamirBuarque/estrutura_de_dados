@@ -1,15 +1,15 @@
 package lista_package.testes;
 
-import lista_package.Objeto;
+import lista_package.Aluno;
 import lista_package.Vetor;
 
 public class TesteAdicionaPorPosicao {
     public static void main(String[] args) {
         Vetor lista = new Vetor();
-        Objeto a1 = new Objeto();
-        Objeto a2 = new Objeto();
-        Objeto a3 = new Objeto();
-        Objeto a4 = new Objeto();
+        Aluno a1 = new Aluno();
+        Aluno a2 = new Aluno();
+        Aluno a3 = new Aluno();
+        Aluno a4 = new Aluno();
 
         a1.setNome("rafael");
         a2.setNome("paulo");

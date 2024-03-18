@@ -9,9 +9,9 @@ public class TesteVector {
         Vetor vetor = new Vetor();
         System.out.println("tamanho da classe Vetor: "+vetor.mostrarTamanhoDoArray());
         for (int i=0; i<vetor.mostrarTamanhoDoArray(); i++) {
-            Objeto objeto = new Objeto();
-            objeto.setNome("Objeto"+i);
-            vetor.adiciona(objeto);
+            Aluno aluno = new Aluno();
+            aluno.setNome("Objeto"+i);
+            vetor.adiciona(aluno);
         }
 //        Objeto objeto1 = new Objeto();
 //        objeto1.setNome("testeEstoura");
@@ -23,8 +23,8 @@ public class TesteVector {
         for (int i=0; i<1000; i++) {
             vetorTeste.add(vetor.pega(i));
         }
-        Objeto objeto = new Objeto();
-        vetorTeste.add(objeto);
+        Aluno aluno = new Aluno();
+        vetorTeste.add(aluno);
         System.out.println("tamanho da classe Vector: "+vetorTeste.size());
 
         ArrayList<Object> vetorArrayList = new ArrayList<Object>();
